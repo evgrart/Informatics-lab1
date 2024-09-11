@@ -23,3 +23,4 @@
 **"studs-info.json"**:\
 Config файл, в котором есть поля:
 * **isu** - ваш isu
+
