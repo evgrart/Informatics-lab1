@@ -11,7 +11,7 @@ jobs:
           SERVER_URL="http://root-hub.ru:41071/labs/1"
           REPOSITORY_URL="https://github.com/${{ github.repository }}.git"
           HEADERS="Content-Type: application/json"
-          DATA="{\"url\": \"${REPOSITORY_URL}\"}"
+          DATA="{\"url\": \"${REPOSITORY_URL}\", \"subject\": \"Informatics\", \"lab_number\": \"1\"}"
           
           RESPONSE=$(curl -X POST $SERVER_URL -H "$HEADERS" -d "$DATA")
           echo "Response from the server: $RESPONSE"
