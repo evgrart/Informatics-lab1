@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Получение ссылки на репозиторий
+      - name: Отправление лабораторной работы на проверку
         run: |
           SERVER_URL="http://root-hub.ru:41071/labs/1"
           REPOSITORY_URL="https://github.com/${{ github.repository }}.git"
