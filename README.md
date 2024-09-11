@@ -17,9 +17,9 @@
 
 ## Алгоритм заполнения config файлов
 
-**"informatics-lab1.docs"**:\
+**"informatics-lab1.docx"**:\
 Файл с вашим отчетом
 
 **"studs-info.json"**:\
 Config файл, в котором есть поля:
-* **variant** - ваш вариант
+* **isu** - ваш isu
