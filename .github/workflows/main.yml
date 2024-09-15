@@ -14,6 +14,8 @@ jobs:
          echo 'response_data = response.json()' >> connect.py
          echo 'text_message = response_data.get("text_message")' >> connect.py
          echo 'print(text_message)' >> connect.py
+         ls
       - name: Отправление лабораторной работы на проверку
         run: |
-          python3 conncet.py "Informatics" "1"
+         ls
+         python3 conncet.py "Informatics" "1"
