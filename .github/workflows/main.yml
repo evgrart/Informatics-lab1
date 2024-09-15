@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Создаем скрипт для коннекта к системе
         run: |
+         
          echo 'import requests' >> connect.py
          echo 'import sys' >> connect.py
          echo 'data = {"url": "https://github.com/${{ github.repository }}.git", "subject": sys.argv[1], "lab_number": sys.argv[2]}' >> connect.py
@@ -18,4 +19,5 @@ jobs:
       - name: Отправление лабораторной работы на проверку
         run: |
          pip install requests
+         echo '_________________________________________________________________________'
          python3 connect.py "Informatics" "1"
