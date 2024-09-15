@@ -13,6 +13,6 @@ jobs:
         
       - name: Отправление лабораторной работы на проверку
         run: |
-         REPOSITORY_URL="https://github.com/${{ github.repository }}.git"
+         REPOSITORY_URL="${{ github.event.pull_request.head.repo.full_name }}"
          pip install requests
          python3 ./.github/workflows/connect.py $REPOSITORY_URL "Informatics" "1"
