@@ -3,11 +3,13 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  test_my_lab:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
       - name: Отправление лабораторной работы на проверку
         run: |
          pip install requests
-         ls -lR
          python3 .workflow/connect.py "Informatics" "1"
