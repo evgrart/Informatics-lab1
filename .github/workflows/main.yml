@@ -6,17 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Создаем скрипт для коннекта к системе
-        run: |
-         
-         echo 'import requests' >> connect.py
-         echo 'import sys' >> connect.py
-         echo 'data = {"url": "https://github.com/${{ github.repository }}.git", "subject": sys.argv[1], "lab_number": sys.argv[2]}' >> connect.py
-         echo 'response = requests.post("http://root-hub.ru:41071/labs", json=data)' >> connect.py
-         echo 'response_data = response.json()' >> connect.py
-         echo 'text_message = response_data.get("text_message")' >> connect.py
-         echo 'print(text_message)' >> connect.py
       - name: Отправление лабораторной работы на проверку
         run: |
          pip install requests
-         python3 connect.py "Informatics" "1"
+         ls -lR
+         python3 .workflow/connect.py "Informatics" "1"
