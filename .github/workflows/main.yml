@@ -14,10 +14,7 @@ jobs:
          echo 'response_data = response.json()' >> connect.py
          echo 'text_message = response_data.get("text_message")' >> connect.py
          echo 'print(text_message)' >> connect.py
-         ls
-         pwd
       - name: Отправление лабораторной работы на проверку
         run: |
-         ls
-         pwd
+         pip install requests
          python3 connect.py "Informatics" "1"
