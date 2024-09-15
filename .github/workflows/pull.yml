@@ -1,0 +1,16 @@
+on:
+  pull_request_target:
+    branches: [ "main" ]
+
+jobs:
+  test_my_lab:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Отправление лабораторной работы на проверку
+        run: |
+         REPOSITORY_URL="https://github.com/${{ github.event.pull_request.head.repo.full_name }}.git"
+         pip install requests
+         python3 ./.github/workflows/connect.py $REPOSITORY_URL "Informatics" "1"
