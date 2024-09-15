@@ -11,6 +11,6 @@ jobs:
         
       - name: Отправление лабораторной работы на проверку
         run: |
-         ls -Ra
+         REPOSITORY_URL="https://github.com/${{ github.repository }}.git"
          pip install requests
-         python3 ./.github/workflows/connect.py "Informatics" "1"
+         python3 ./.github/workflows/connect.py $REPOSITORY_URL "Informatics" "1"
