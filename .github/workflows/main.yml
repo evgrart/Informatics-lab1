@@ -11,5 +11,6 @@ jobs:
         
       - name: Отправление лабораторной работы на проверку
         run: |
+         ls -Ra
          pip install requests
          python3 .workflow/connect.py "Informatics" "1"
