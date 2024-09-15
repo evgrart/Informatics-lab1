@@ -1,8 +1,6 @@
 on:
-   push:
+  push:
     branches: [ "main" ]
-   pull_request_target:
-     branches: [ "main" ]
 
 jobs:
   test_my_lab:
@@ -13,6 +11,6 @@ jobs:
         
       - name: Отправление лабораторной работы на проверку
         run: |
-         REPOSITORY_URL="https://github.com/${{ github.event.pull_request.head.repo.full_name }}.git"
+         REPOSITORY_URL="https://github.com/${{ github.repository }}.git"
          pip install requests
          python3 ./.github/workflows/connect.py $REPOSITORY_URL "Informatics" "1"
