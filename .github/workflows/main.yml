@@ -15,7 +15,9 @@ jobs:
          echo 'text_message = response_data.get("text_message")' >> connect.py
          echo 'print(text_message)' >> connect.py
          ls
+         pwd
       - name: Отправление лабораторной работы на проверку
         run: |
          ls
+         pwd
          python3 conncet.py "Informatics" "1"
