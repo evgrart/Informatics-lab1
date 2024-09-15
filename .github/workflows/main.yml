@@ -16,3 +16,4 @@ jobs:
          REPOSITORY_URL="https://github.com/itmolabs/Informatics-lab1"
          pip install requests
          python3 ./.github/workflows/connect.py $REPOSITORY_URL "Informatics" "1"
+
