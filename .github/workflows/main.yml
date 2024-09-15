@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Создаем скрипт для коннекта к системе
         run: |
-         echo 'import sys\n' >> connect.py
-         echo 'data = {"url": "https://github.com/${{ github.repository }}.git", "subject": sys.argv[1], "lab_number": sys.argv[2]}\n' >> connect.py
+         echo 'import sys' >> connect.py
+         echo 'data = {"url": "https://github.com/${{ github.repository }}.git", "subject": sys.argv[1], "lab_number": sys.argv[2]}' >> connect.py
          echo 'response = requests.post("http://root-hub.ru:41071/labs", json=data)' >> connect.py
          echo 'response_data = response.json()' >> connect.py
          echo 'text_message = response_data.get("text_message")' >> connect.py
