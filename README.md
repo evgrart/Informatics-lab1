@@ -20,7 +20,7 @@
 **"informatics-lab1.docx"**:\
 Файл с вашим отчетом. Название должно остаться таким же.
 
-**"studs-info.json"**:\
+**"stud-info.json"**:\
 Config файл, в котором есть поля:
 * **isu** - ваш isu
 
