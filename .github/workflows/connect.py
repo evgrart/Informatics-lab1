@@ -7,3 +7,8 @@ response_data = response.json()
 text_message = response_data.get("text_message")
 
 print(text_message)
+
+if "failed" in text_message:
+  exit(-1)
+exit(0)
+
